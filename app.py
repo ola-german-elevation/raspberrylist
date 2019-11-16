@@ -7,7 +7,7 @@ from flask import request
 import pymongo
 
 app = Flask(__name__)
-uri = os.os.environ.get('MONGOLAB_URI')
+uri = os.environ.get('MONGOLAB_URI')
 # app.config["MONGO_URI"] = uri
 # mongo = PyMongo(app)
 mongo = pymongo.MongoClient(uri)
