@@ -1,10 +1,13 @@
+import os
+
 from flask import Flask
 from flask import render_template
 from flask import request
 from flask_pymongo import PyMongo
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb://heroku_4ctp328z:h9626hquu0bk7kk3e6oqjeh49s@ds041228.mlab.com:41228/heroku_4ctp328z"
+
+app.config["MONGO_URI"] = "mongodb://heroku_4ctp328z:DiscWorld12@ds041228.mlab.com:41228/heroku_4ctp328z"
 mongo = PyMongo(app)
 
 
