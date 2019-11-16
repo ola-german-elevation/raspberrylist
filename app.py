@@ -7,9 +7,9 @@ from flask_pymongo import PyMongo
 
 app = Flask(__name__)
 
-app.config["MONGO_URI"] = "mongodb://heroku_4ctp328z:DiscWorld12@ds041228.mlab.com:41228/heroku_4ctp328z"
+# app.config["MONGO_URI"] = "mongodb://heroku_4ctp328z:DiscWorld12@ds041228.mlab.com:41228/heroku_4ctp328z"
 mongo = PyMongo(app)
-db = mongo['heroku_4ctp328z']
+db = mongo.get_default_database()
 my_rasps = db['rasps']
 
 @app.route('/')
