@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% if title %}
+        <title>{{ title }} - Microblog</title>
+        {% else %}
+        <title>Welcome to Microblog</title>
+        {% endif %}
+    </head>
+    <body>
+        <h1>Raspberries connected to the network</h1>
+        {% for rasp in raspberries %}
+        <div><p>{{ rasp.name }} : <b>{{ rasp.ip }}</b></p></div>
+        {% endfor %}
+    </body>
+</html>
